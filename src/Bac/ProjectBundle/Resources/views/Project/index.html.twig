@@ -1,0 +1,22 @@
+{% extends 'BacProjectBundle::layout.html.twig' %}
+{% block body %}
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Manager</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for project in projects %}
+                <tr>
+                    <td>{{ project.id }}</td>
+                    <td>{{ project.name }}</td>
+                    <td>{{ project.description }}</td>
+                    <td>manager</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
